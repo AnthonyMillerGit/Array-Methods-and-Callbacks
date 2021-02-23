@@ -7,14 +7,38 @@ Practice accessing data by console.log-ing the following pieces of data note, yo
 
 //(a) Home Team name for 2014 world cup final
 
+fifaData.filter((team) =>{
+    if (team.Year === "2014" && team.Stage === "final")
+        console.log(team['Home Team Name'])
+})
+
 //(b) Away Team name for 2014 world cup final
+
+fifaData.filter((team) =>{
+    if (team.Year === "2014" && team.Stage === "final")
+        console.log(team['Away Team Name'])
+})
 
 //(c) Home Team goals for 2014 world cup final
 
+fifaData.filter((team) =>{
+    if (team.Year === "2014" && team.Stage === "final")
+        console.log(team['Home Team Goals'])
+})
+
 //(d) Away Team goals for 2014 world cup final
+
+fifaData.filter((team) =>{
+    if (team.Year === "2014" && team.Stage === "final")
+        console.log(team['Away Team Goals'])
+})
 
 //(e) Winner of 2014 world cup final */
 
+fifaData.filter((team) =>{
+    if (team.Year === "2014" && team.Stage === "final")
+        console.log(team['Win Conditions'])
+})
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
@@ -23,9 +47,10 @@ Use getFinals to do the following:
 
 hint - you should be looking at the stage key inside of the objects
 */
-
-function getFinals(/* code here */) {
-   /* code here */
+function getFinals(data) {
+  return data.filter((game) => {
+      if (game.Stage === "Final") return game;
+    })
 }
 
 
